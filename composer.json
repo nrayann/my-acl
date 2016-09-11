@@ -1,5 +1,5 @@
 {
-    "name": "nrayann/MyAcl",
+    "name": "nrayann/my-acl",
     "description": "MyAcl plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
