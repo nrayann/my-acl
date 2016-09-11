@@ -17,6 +17,7 @@ Plugin::load('MyAcl', ['bootstrap' => false, 'routes' => true]);
 ```
 Include and configure the AuthComponent and the AclComponent in the AppController
 ```
+#!php
     public $components = [
         'Acl' => [
             'className' => 'Acl.Acl'
