@@ -10,6 +10,12 @@ The recommended way to install composer packages is:
 composer require 'nrayann/my-acl:dev-master'
 ```
 
+Include the ACL and MyAcl plugin in app/config/bootstrap.php
+```
+Plugin::load('Acl', ['bootstrap' => true]);
+Plugin::load('MyAcl', ['bootstrap' => false, 'routes' => true]);
+```
+
 Set up your database config in `config/app.php`
 
 Run ```
