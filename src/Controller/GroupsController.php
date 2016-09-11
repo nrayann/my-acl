@@ -11,6 +11,12 @@ use MyAcl\Controller\AppController;
 class GroupsController extends AppController
 {
 
+    public function beforeRender(Event $event)
+    {
+        parent::beforeRender();
+        $this->viewBuilder()->layout('MyAcl.default');
+    }
+
     /**
      * Index method
      *

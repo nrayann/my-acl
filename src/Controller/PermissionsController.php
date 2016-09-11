@@ -8,9 +8,10 @@ use Acl\Shell\AclExtrasShell;
 
 class PermissionsController extends AppController
 {
-    public function initialize()
+    public function beforeRender(Event $event)
     {
-        parent::initialize();
+        parent::beforeRender();
+        $this->viewBuilder()->layout('MyAcl.default');
     }
 
     public function acos($id, $model)

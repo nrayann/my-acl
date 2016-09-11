@@ -47,6 +47,7 @@ class UsersController extends AppController
 
         $this->set(compact('users'));
         $this->set('_serialize', ['users']);
+        $this->viewBuilder()->layout('MyAcl.default');
     }
 
     /**
@@ -70,6 +71,7 @@ class UsersController extends AppController
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);
         $this->set(compact('user', 'groups'));
         $this->set('_serialize', ['user']);
+        $this->viewBuilder()->layout('MyAcl.default');
     }
 
     /**
@@ -99,6 +101,7 @@ class UsersController extends AppController
         $groups = $this->Users->Groups->find('list', ['limit' => 200]);
         $this->set(compact('user', 'groups'));
         $this->set('_serialize', ['user']);
+        $this->viewBuilder()->layout('MyAcl.default');
     }
 
     /**
