@@ -1,10 +1,14 @@
+var url = window.location.href;
+url = url.split('permissions');
+
 $('.grantOrDeny').on('click', function () {
   var that = $(this),
       aro_id = $(this).attr('data-aro'),
       aco_id = $(this).attr('data-aco');
+
   $.ajax(
   {
-    url: base_url + "my-acl/permissions/grantOrDeny",
+    url: url[0] + "permissions/grantOrDeny",
     dataType: 'JSON',
     type: 'POST',
     data: {
