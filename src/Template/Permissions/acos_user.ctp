@@ -28,9 +28,9 @@
                     <?php if (!empty($child['aros'])): ?>
                       <?php foreach ($child['aros'] as $k => $aroc): ?>
                         <?php if ($aroc->foreign_key == $obj->id && $aroc->_joinData->_create == 1): ?>
-                          <span style="cursor:pointer;" data-aco="<?= $aroc->_joinData->aco_id ?>" data-aro="<?= $aroc->_joinData->aro_id ?>" class='grantOrDeny label label-success'>Permitido</span>
+                          <span style="cursor:pointer;" data-aco="<?= $aroc->_joinData->aco_id ?>" data-aro="<?= $aro->id ?>" class='grantOrDeny label label-success'>Permitido</span>
                         <?php else: ?>
-                          <span style="cursor:pointer;" data-aco="<?= $child->id ?>" data-aro="<?= $aroc->id ?>" class='grantOrDeny label label-danger'>Negado</span>
+                          <span style="cursor:pointer;" data-aco="<?= $child->id ?>" data-aro="<?= $aro->id ?>" class='grantOrDeny label label-danger'>Negado</span>
                         <?php endif ?>
                       <?php endforeach ?>
                     <?php else: ?>
@@ -52,7 +52,7 @@
                       <?php if (!empty($grandchildren['aros'])): ?>
                         <?php foreach ($grandchildren['aros'] as $j => $arop): ?>
                           <?php if ($arop->foreign_key == $obj->id && $arop->_joinData->_create == 1): ?>
-                            <span style="cursor:pointer;" data-aco="<?= $arop->_joinData->aco_id ?>" data-aro="<?= $arop->_joinData->aro_id ?>" class='grantOrDeny label label-success'>Permitido</span>
+                            <span style="cursor:pointer;" data-aco="<?= $arop->_joinData->aco_id ?>" data-aro="<?= $aro->id ?>" class='grantOrDeny label label-success'>Permitido</span>
                           <?php else: ?>
                             <span style="cursor:pointer;" data-aco="<?= $grandchildren->id ?>" data-aro="<?= $aro->id ?>" class='grantOrDeny label label-danger'>Negado</span>
                           <?php endif ?>
