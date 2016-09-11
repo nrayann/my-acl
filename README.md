@@ -15,6 +15,44 @@ Include the ACL and MyAcl plugin in app/config/bootstrap.php
 Plugin::load('Acl', ['bootstrap' => true]);
 Plugin::load('MyAcl', ['bootstrap' => false, 'routes' => true]);
 ```
+Include and configure the AuthComponent and the AclComponent in the AppController
+```
+    public $components = [
+        'Acl' => [
+            'className' => 'Acl.Acl'
+        ]
+    ];
+...
+    $this->loadComponent('Auth', [
+        'authorize' => [
+            'Acl.Actions' => ['actionPath' => 'controllers/']
+        ],
+        'loginAction' => [
+            'plugin' => 'MyAcl',
+            'controller' => 'Users',
+            'action' => 'login'
+        ],
+        'loginRedirect' => [
+            'plugin' => false,
+            'controller' => 'Pages',
+            'action' => 'display'
+        ],
+        'logoutRedirect' => [
+            'plugin' => 'MyAcl',
+            'controller' => 'Users',
+            'action' => 'login'
+        ],
+        'unauthorizedRedirect' => [
+            'controller' => 'Users',
+            'action' => 'login',
+            'prefix' => false
+        ],
+        'authError' => 'You are not authorized to access that location.',
+        'flash' => [
+            'element' => 'error'
+        ]
+    ]);
+```
 
 Set up your database config in `config/app.php`
 
