@@ -11,13 +11,12 @@ composer require 'nrayann/my-acl:dev-master'
 ```
 
 Include the ACL and MyAcl plugin in app/config/bootstrap.php
-```
+```php
 Plugin::load('Acl', ['bootstrap' => true]);
 Plugin::load('MyAcl', ['bootstrap' => false, 'routes' => true]);
 ```
 Include and configure the AuthComponent and the AclComponent in the AppController
-```
-#!php
+```php
     public $components = [
         'Acl' => [
             'className' => 'Acl.Acl'
