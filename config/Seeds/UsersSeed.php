@@ -25,8 +25,8 @@ class UsersSeed extends AbstractSeed
         $group = $groups_table->find('all')->where(['name' => 'Admin'])->first();
 
         $data = [
-            'name' => 'Rayann Nayran',
-            'username' => 'rayann@pianolab.com.br',
+            'name' => 'Your Name',
+            'username' => 'you@example.com',
             'password' => '123456',
             'group_id' => $group->id,
             'created' =>  date('Y-m-d H:i:s'),
