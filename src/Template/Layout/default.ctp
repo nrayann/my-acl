@@ -28,9 +28,11 @@
 
     <?= $this->fetch('meta') ?>
 
-    <?= $this->Html->css('MyAcl.base.css') ?>
-    <?= $this->Html->css('MyAcl.cake.css') ?>
-    <?= $this->Html->css('MyAcl.style.css') ?>
+    <?= $this->Html->css('MyAcl.base') ?>
+    <?= $this->Html->css('MyAcl.cake') ?>
+    <?= $this->Html->css('MyAcl.style') ?>
+    <?= $this->Html->css('bootstrap.min') ?>
+    <?= $this->Html->css('font-awesome.min') ?>
     <?= $this->fetch('css') ?>
 </head>
 <body>
@@ -42,8 +44,8 @@
         </ul>
         <div class="top-bar-section">
             <ul class="right">
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
+                <li><a target="_blank" href="https://github.com/nrayann/my-acl"><?= __('Documentation') ?></a></li>
+                <li><a target="_blank" href="<?= $this->Url->build('/users/logout', true) ?>"><?= __('Logout') ?></a></li>
             </ul>
         </div>
     </nav>
@@ -53,9 +55,8 @@
         <?= $this->fetch('content'); ?>
     </div>
     <footer>
-        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <?= $this->Html->script('jquery-3.1.0.min', ['block' => true]) ?>
+        <?= $this->Html->script('bootstrap.min', ['block' => true]) ?>
 
         <?= $this->fetch('script') ?>
     </footer>
