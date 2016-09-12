@@ -1,4 +1,6 @@
 <?= $this->Html->script(['MyAcl.myAcl'], ['block' => 'script']); ?>
+<a class="btn btn-info m-t" href="<?= $this->Url->build('/my-acl/permissions/acoSync', true) ?>"><?= __('ACO Sync') ?></a>
+&nbsp
 <a class="btn btn-info m-t" href="<?= $this->Url->build('/my-acl/permissions/config', true) ?>"><?= __('Config') ?></a>
 <?= $this->Html->link(__('Users'), ['controller' => 'users'], ['class' => 'btn btn-primary m-t']) ?>
 <br /><br />
