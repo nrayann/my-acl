@@ -9,17 +9,18 @@
         "cakephp/cakephp": "~3.0",
         "cakephp/acl": "^0.2.2"
     },
-    "keywords": {
-            "cakephp", "cakephp3", "plugin", "acl"
-    },
-    "authors": [
-        {
+    "keywords": [
+            "cakephp",
+            "cakephp3",
+            "plugin",
+            "acl"
+    ],
+    "authors": [{
             "name": "Rayann Nayran",
             "email": "rayannsi@me.com",
             "homepage": "https://github.com/nrayann",
             "role": "Developer"
-        }
-    ],
+    }],
     "require-dev": {
         "phpunit/phpunit": "*"
     },
