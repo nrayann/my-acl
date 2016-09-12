@@ -18,7 +18,7 @@ $('.grantOrDeny').on('click', function () {
     },
     success: function(data,text,xhr)
     {
-      if(data.status === false){alert("Erro!");}
+      if(data.status === false){alert("Error!");}
       else {
         if (that.hasClass('label-success')) {
           that.removeClass('label-success');
@@ -57,7 +57,7 @@ $('.showOrHide').on('click', function () {
     },
     success: function(data,text,xhr)
     {
-      if(data.status === false){alert("Erro!");}
+      if(data.status === false){alert("Error!");}
       else {
         if (that.hasClass('reload')) {
           location.reload();
