@@ -54,6 +54,41 @@ $this->loadComponent('Auth', [
 ]);
 ```
 
+Add UsersController::login function
+```php
+public function login() {
+    if ($this->request->is('post')) {
+        $user = $this->Auth->identify();
+        if ($user) {
+            $this->Auth->setUser($user);
+            return $this->redirect($this->Auth->redirectUrl());
+        }
+        $this->Flash->error(__('Your username or password was incorrect.'));
+    }
+}
+```
+
+Add UsersController::logout function
+```php
+public function logout() {
+    $this->Flash->success(__('Good-Bye'));
+    $this->redirect($this->Auth->logout());
+}
+```
+
+Add src/Templates/Users/login.ctp
+```php
+<?= $this->Form->create() ?>
+<fieldset>
+    <legend><?= __('Login') ?></legend>
+    <?= $this->Form->input('username') ?>
+    <?= $this->Form->input('password') ?>
+    <?= $this->Form->submit(__('Login')) ?>
+</fieldset>
+<?= $this->Form->end() ?>
+```
+
+
 Set up your database config in `config/app.php`
 
 Run ```
