@@ -65,11 +65,11 @@ $('.showOrHide').on('click', function () {
           if (that.hasClass('label-success')) {
             that.removeClass('label-success');
             that.addClass('label-danger');
-            that.text('Invisível');
+            that.text('Invisible');
           } else{
             that.removeClass('label-danger');
             that.addClass('label-success');
-            that.text('Visível');
+            that.text('Visible');
           };
         }
       }
