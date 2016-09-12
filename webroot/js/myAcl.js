@@ -1,5 +1,6 @@
 var url = window.location.href;
 url = url.split('permissions');
+url = url[0];
 
 $('.grantOrDeny').on('click', function () {
   var that = $(this),
@@ -8,7 +9,7 @@ $('.grantOrDeny').on('click', function () {
 
   $.ajax(
   {
-    url: url[0] + "permissions/grantOrDeny",
+    url: url + "permissions/grantOrDeny",
     dataType: 'JSON',
     type: 'POST',
     data: {
@@ -48,7 +49,7 @@ $('.showOrHide').on('click', function () {
 
   $.ajax(
   {
-    url: base_url + "my-acl/permissions/config",
+    url: url + "permissions/config",
     dataType: 'JSON',
     type: 'POST',
     data: {

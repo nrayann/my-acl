@@ -16,3 +16,11 @@
 .m-r {
   margin-right: 15px;
 }
+.label-danger{
+  background-color: #D33C44;
+  color: #FFFFFF;
+}
+.label-success {
+  background-color: #008CBA;
+  color: #FFFFFF;
+}
