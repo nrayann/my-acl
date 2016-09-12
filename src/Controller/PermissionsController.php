@@ -48,8 +48,8 @@ class PermissionsController extends AppController
             }
         }
 
-        $this->set('arr_acos', array_chunk($acos, 100));
-        // $this->set('arr_acos', array_chunk($acos, count($acos)/2));
+        $this->set('acos', $acos);
+
         $this->viewBuilder()->layout('MyAcl.default');
 
         if ($model == 'user') {
