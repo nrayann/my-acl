@@ -10,7 +10,9 @@
         "cakephp/acl": "^0.2.2"
     },
     "keywords": [
-        "cakephp", "cakephp3", "plugin", "acl"
+        {
+            "cakephp", "cakephp3", "plugin", "acl"
+        }
     ]
     "authors": [
         {
