@@ -24,15 +24,13 @@
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <?= $this->fetch('meta') ?>
 
+    <?= $this->Html->css('MyAcl.bootstrap.min') ?>
+    <?= $this->Html->css('MyAcl.font-awesome.min') ?>
     <?= $this->Html->css('MyAcl.base') ?>
     <?= $this->Html->css('MyAcl.cake') ?>
     <?= $this->Html->css('MyAcl.style') ?>
-    <?= $this->Html->css('bootstrap.min') ?>
-    <?= $this->Html->css('font-awesome.min') ?>
     <?= $this->fetch('css') ?>
 </head>
 <body>
@@ -55,8 +53,8 @@
         <?= $this->fetch('content'); ?>
     </div>
     <footer>
-        <?= $this->Html->script('jquery-3.1.0.min', ['block' => true]) ?>
-        <?= $this->Html->script('bootstrap.min', ['block' => true]) ?>
+        <?= $this->Html->script('MyAcl.jquery-3.1.0.min') ?>
+        <?= $this->Html->script('MyAcl.bootstrap.min') ?>
 
         <?= $this->fetch('script') ?>
     </footer>
