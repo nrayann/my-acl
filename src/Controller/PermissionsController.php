@@ -33,6 +33,7 @@ class PermissionsController extends AppController
                     // controllers
                     if (!empty($aco_children['aros'])) {
                         foreach ($aco_children['aros'] as $key_2 => $aco_children_aros) {
+                            // removing aros other aros
                             if ($aco_children_aros->foreign_key != $id || $aco_children_aros->model != ucfirst($model)) {
                                 unset($acos[$key]['children'][$key_1]['aros'][$key_2]);
                             }
@@ -45,6 +46,7 @@ class PermissionsController extends AppController
                         foreach ($aco_children['children'] as $key_3 => $grandchildren) {
                             if (!empty($grandchildren['aros'])) {
                                 foreach ($grandchildren['aros'] as $key_4 => $grandchildren_aro) {
+                                    // removing aros other aros
                                     if ($grandchildren_aro->foreign_key != $id || $grandchildren_aro->model != ucfirst($model)) {
                                         unset($acos[$key]['children'][$key_1]['children'][$key_3]['aros'][$key_4]);
                                     }
