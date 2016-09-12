@@ -28,7 +28,7 @@ $this->loadComponent('Auth', [
         'Acl.Actions' => ['actionPath' => 'controllers/']
     ],
     'loginAction' => [
-        'plugin' => 'MyAcl',
+        'plugin' => false,
         'controller' => 'Users',
         'action' => 'login'
     ],
@@ -38,11 +38,12 @@ $this->loadComponent('Auth', [
         'action' => 'display'
     ],
     'logoutRedirect' => [
-        'plugin' => 'MyAcl',
+        'plugin' => false,
         'controller' => 'Users',
         'action' => 'login'
     ],
     'unauthorizedRedirect' => [
+        'plugin' => false,
         'controller' => 'Users',
         'action' => 'login',
         'prefix' => false
