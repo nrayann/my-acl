@@ -16,48 +16,47 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $this->fetch('title') ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
+    <head>
+        <?= $this->Html->charset() ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?= $this->fetch('meta') ?>
 
+        <title>
+            <?= $this->fetch('title') ?>
+        </title>
+        <?= $this->Html->meta('icon') ?>
 
-    <?= $this->fetch('meta') ?>
-
-    <?= $this->Html->css('MyAcl.bootstrap.min') ?>
-    <?= $this->Html->css('MyAcl.font-awesome.min') ?>
-    <?= $this->Html->css('MyAcl.base') ?>
-    <?= $this->Html->css('MyAcl.cake') ?>
-    <?= $this->Html->css('MyAcl.style') ?>
-    <?= $this->fetch('css') ?>
-</head>
-<body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="https://github.com/nrayann/my-acl"><?= __('Documentation') ?></a></li>
-                <li><a href="<?= $this->Url->build('/users/logout', true) ?>"><?= __('Logout') ?></a></li>
+        <?= $this->Html->css('MyAcl.bootstrap.min') ?>
+        <?= $this->Html->css('MyAcl.font-awesome.min') ?>
+        <?= $this->Html->css('MyAcl.base') ?>
+        <?= $this->Html->css('MyAcl.cake') ?>
+        <?= $this->Html->css('MyAcl.style') ?>
+        <?= $this->fetch('css') ?>
+    </head>
+    <body>
+        <nav class="top-bar expanded" data-topbar role="navigation">
+            <ul class="title-area large-3 medium-4 columns">
+                <li class="name">
+                    <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                </li>
             </ul>
+            <div class="top-bar-section">
+                <ul class="right">
+                    <li><a target="_blank" href="https://github.com/nrayann/my-acl"><?= __('Documentation') ?></a></li>
+                    <li><a href="<?= $this->Url->build('/users/logout', true) ?>"><?= __('Logout') ?></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <?= $this->Flash->render() ?>
+        <div class="container clearfix">
+            <?= $this->fetch('content'); ?>
         </div>
-    </nav>
+        <footer>
+            <?= $this->Html->script('MyAcl.jquery-3.1.0.min') ?>
+            <?= $this->Html->script('MyAcl.bootstrap.min') ?>
 
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content'); ?>
-    </div>
-    <footer>
-        <?= $this->Html->script('MyAcl.jquery-3.1.0.min') ?>
-        <?= $this->Html->script('MyAcl.bootstrap.min') ?>
-
-        <?= $this->fetch('script') ?>
-    </footer>
-</body>
+            <?= $this->fetch('script') ?>
+        </footer>
+    </body>
 </html>
