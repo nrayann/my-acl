@@ -21,7 +21,7 @@
             <td><?= h($group->modified) ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $group->id], ['class' => 'btn btn-info btn-xs']) ?>
-                <?= $this->Html->link(__('Permissions'), ['controller' => 'permissions', 'action' => 'acos', $group->id, 'group'], ['class' => 'btn btn-primary btn-xs']) ?>
+                <?= $this->Html->link(__('Permissions'), ['controller' => 'permissions', 'action' => 'acos', $group->id, 'groups'], ['class' => 'btn btn-primary btn-xs']) ?>
                 <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $group->id], ['class' => 'btn btn-danger btn-xs', 'confirm' => __('Are you sure you want to delete # {0}?', $group->id)]) ?>
             </td>
         </tr>
