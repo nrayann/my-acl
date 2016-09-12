@@ -88,7 +88,6 @@ Add src/Templates/Users/login.ctp
 <?= $this->Form->end() ?>
 ```
 
-
 Set up your database config in `config/app.php`
 
 Run ```
@@ -103,14 +102,16 @@ Run ```
 bin/cake migrations migrate -p MyAcl
 ``` to create Users and Groups tables.
 
-Put your User data to seed in config/Seeds/UsersSeed.php
-
 Run ```
 bin/cake migrations seed --seed UsersSeed -p MyAcl
-``` to populate the database.
+``` to create the admin user.
 
 Run ```
 bin/cake acl grant Groups.1 controllers
 ``` to grant permissions for admin group.
 
 Inside the project folder, run `sudo chmod -R 777 tmp/` to solve/avoid permission errors.
+
+Log in credentials:
+username: you@example.com
+password: 123456
