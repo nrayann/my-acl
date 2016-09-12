@@ -1,6 +1,6 @@
 {
     "name": "nrayann/my-acl",
-    "description": "MyAcl plugin for CakePHP",
+    "description": "CakePHP plugin for manage ACL with a friendly interface.",
     "type": "cakephp-plugin",
     "homepage": "https://github.com/nrayann",
     "license": "MIT",
