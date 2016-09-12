@@ -4,11 +4,12 @@
 <br /><br />
 <div class="row m-b">
   <div class="col-md-12">
+    <h3>User <?= $obj->username ?></h3>
     <table class="table table-bordered">
       <thead>
       <tr>
         <th width="50%" >ACOs</th>
-        <th width="50%"><?= ucfirst($obj->username) ?></th>
+        <th width="50%"><?= $obj->username ?></th>
       </tr>
       </thead>
       <tbody>

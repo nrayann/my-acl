@@ -4,6 +4,7 @@
 <br /><br />
 <div class="row m-b">
   <div class="col-md-12">
+    <h3>Group <?= ucfirst($obj->name) ?></h3>
     <table class="table table-bordered">
       <thead>
         <tr>
