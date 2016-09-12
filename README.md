@@ -115,3 +115,10 @@ Inside the project folder, run `sudo chmod -R 777 tmp/` to solve/avoid permissio
 Log in credentials:
 username: you@example.com
 password: 123456
+
+For aco sync, access http://"your-application-address"/my-acl/permissions/acoSync
+
+For grant/deny permissions to users and groups, click on permissions buttom at actions column in its index template.
+
+For hide or show ACOS on permission lists, click on config buttom or access http://"your-application-address"/my-acl/permissions/config
+
