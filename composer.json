@@ -9,11 +9,9 @@
         "cakephp/cakephp": "~3.0",
         "cakephp/acl": "^0.2.2"
     },
-    "keywords": [
-        {
+    "keywords": {
             "cakephp", "cakephp3", "plugin", "acl"
-        }
-    ]
+    },
     "authors": [
         {
             "name": "Rayann Nayran",
