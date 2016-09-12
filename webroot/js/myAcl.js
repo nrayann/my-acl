@@ -23,21 +23,21 @@ $('.grantOrDeny').on('click', function () {
         if (that.hasClass('label-success')) {
           that.removeClass('label-success');
           that.addClass('label-danger');
-          that.text('Negado');
+          that.text('Denied');
         } else if (that.hasClass('label-info')) {
           that.removeClass('label-info');
           that.addClass('label-success');
-          that.text('Permitido');
+          that.text('Allowed');
         } else if (that.hasClass('label-danger')) {
           that.removeClass('label-danger');
           that.addClass('label-success');
-          that.text('Permitido');
+          that.text('Allowed');
         };
       }
     },
     error: function()
     {
-      alert("Erro!");
+      alert("Error!");
     }
   });
 });
@@ -76,7 +76,7 @@ $('.showOrHide').on('click', function () {
     },
     error: function()
     {
-      alert("Erro!");
+      alert("Error!");
     }
   });
 });
