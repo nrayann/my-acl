@@ -24,6 +24,7 @@
     </title>
     <?= $this->Html->meta('icon') ?>
 
+
     <?= $this->fetch('meta') ?>
 
     <?= $this->Html->css('MyAcl.bootstrap.min') ?>
@@ -43,7 +44,7 @@
         <div class="top-bar-section">
             <ul class="right">
                 <li><a target="_blank" href="https://github.com/nrayann/my-acl"><?= __('Documentation') ?></a></li>
-                <li><a target="_blank" href="<?= $this->Url->build('/users/logout', true) ?>"><?= __('Logout') ?></a></li>
+                <li><a href="<?= $this->Url->build('/users/logout', true) ?>"><?= __('Logout') ?></a></li>
             </ul>
         </div>
     </nav>

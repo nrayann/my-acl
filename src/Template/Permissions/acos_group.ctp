@@ -2,7 +2,7 @@
 <a class="btn btn-info m-t" href="<?= $this->Url->build('/my-acl/permissions/acoSync', true) ?>"><?= __('ACO Sync') ?></a>
 &nbsp
 <a class="btn btn-info m-t" href="<?= $this->Url->build('/my-acl/permissions/config', true) ?>"><?= __('Config') ?></a>
-<?= $this->Html->link(__('Users'), ['controller' => 'users'], ['class' => 'btn btn-primary m-t']) ?>
+<?= $this->Html->link(__('Groups'), ['controller' => 'groups'], ['class' => 'btn btn-primary m-t']) ?>
 <br /><br />
 <div class="row m-b">
   <div class="col-md-12">
@@ -27,7 +27,7 @@
                 <td>
                 <?php if (!empty($child['aros'])): ?>
                   <?php foreach ($child['aros'] as $k => $aroc): ?>
-                    <?php if ($aroc->foreign_key == $obj->id && $aroc->_joinData->_create == 1): ?>
+                    <?php if ($aroc->foreign_key == $obj->id && $aroc->_joinData->_create == 1 && $aroc->model == 'Groups'): ?>
                       <span data-aco="<?= $aroc->_joinData->aco_id ?>" data-aro="<?= $aro->id ?>" class='grantOrDeny label label-success'><?= __('Allowed') ?></span>
                     <?php else: ?>
                       <span data-aco="<?= $child->id ?>" data-aro="<?= $aro->id ?>" class='grantOrDeny label label-danger'><?= __('Denied') ?></span>
@@ -49,7 +49,7 @@
                   <td>
                   <?php if (!empty($grandchildren['aros'])): ?>
                     <?php foreach ($grandchildren['aros'] as $j => $arop): ?>
-                      <?php if ($arop->foreign_key == $obj->id && $arop->_joinData->_create == 1): ?>
+                      <?php if ($arop->foreign_key == $obj->id && $arop->_joinData->_create == 1 && $arop->model == 'Groups'): ?>
                         <span data-aco="<?= $arop->_joinData->aco_id ?>" data-aro="<?= $aro->id ?>" class='grantOrDeny label label-success'><?= __('Allowed') ?></span>
                       <?php else: ?>
                         <span data-aco="<?= $grandchildren->id ?>" data-aro="<?= $aro->id ?>" class='grantOrDeny label label-danger'><?= __('Denied') ?></span>
