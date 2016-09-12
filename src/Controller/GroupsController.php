@@ -11,12 +11,6 @@ use MyAcl\Controller\AppController;
 class GroupsController extends AppController
 {
 
-    public function beforeRender(Event $event)
-    {
-        parent::beforeRender();
-        $this->viewBuilder()->layout('MyAcl.default');
-    }
-
     /**
      * Index method
      *
@@ -28,23 +22,7 @@ class GroupsController extends AppController
 
         $this->set(compact('groups'));
         $this->set('_serialize', ['groups']);
-    }
-
-    /**
-     * View method
-     *
-     * @param string|null $id Group id.
-     * @return \Cake\Network\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $group = $this->Groups->get($id, [
-            'contain' => ['Users']
-        ]);
-
-        $this->set('group', $group);
-        $this->set('_serialize', ['group']);
+        $this->viewBuilder()->layout('MyAcl.default');
     }
 
     /**
@@ -67,6 +45,7 @@ class GroupsController extends AppController
         }
         $this->set(compact('group'));
         $this->set('_serialize', ['group']);
+        $this->viewBuilder()->layout('MyAcl.default');
     }
 
     /**
@@ -93,6 +72,7 @@ class GroupsController extends AppController
         }
         $this->set(compact('group'));
         $this->set('_serialize', ['group']);
+        $this->viewBuilder()->layout('MyAcl.default');
     }
 
     /**

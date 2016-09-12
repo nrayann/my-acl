@@ -20,9 +20,9 @@
             <td><?= h($user->username) ?></td>
             <td><?= $user->group->name ?></td>
             <td class="actions">
-                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], ['class' => 'btn btn-info']) ?>
-                <?= $this->Html->link(__('Permissions'), ['controller' => 'permissions', 'action' => 'acos', $user->id, 'user'], ['class' => 'btn btn-primary']) ?>
-                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class' => 'btn btn-danger', 'confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], ['class' => 'btn btn-info btn-xs']) ?>
+                <?= $this->Html->link(__('Permissions'), ['controller' => 'permissions', 'action' => 'acos', $user->id, 'user'], ['class' => 'btn btn-primary btn-xs']) ?>
+                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class' => 'btn btn-danger btn-xs', 'confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
             </td>
         </tr>
         <?php endforeach; ?>

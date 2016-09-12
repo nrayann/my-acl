@@ -8,11 +8,6 @@ use Acl\Shell\AclExtrasShell;
 
 class PermissionsController extends AppController
 {
-    public function beforeRender(Event $event)
-    {
-        parent::beforeRender();
-        $this->viewBuilder()->layout('MyAcl.default');
-    }
 
     public function acos($id, $model)
     {
@@ -55,6 +50,7 @@ class PermissionsController extends AppController
 
         $this->set('arr_acos', array_chunk($acos, 100));
         // $this->set('arr_acos', array_chunk($acos, count($acos)/2));
+        $this->viewBuilder()->layout('MyAcl.default');
 
         if ($model == 'user') {
             $aros_table = TableRegistry::get('Aros');
@@ -151,9 +147,8 @@ class PermissionsController extends AppController
             ->where(['Acos.id !=' => 1])
             ->toArray();
 
-            $c = count($acos);
-            $this->set('arr_acos', array_chunk($acos, 100));
-            // $this->set('arr_acos', array_chunk($acos, intval($c/2)));
+            $this->set('acos', $acos);
+            $this->viewBuilder()->layout('MyAcl.default');
         }
 
     }

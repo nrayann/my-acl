@@ -27,13 +27,29 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <?= $this->fetch('meta') ?>
+
+    <?= $this->Html->css('MyAcl.base.css') ?>
+    <?= $this->Html->css('MyAcl.cake.css') ?>
+    <?= $this->Html->css('MyAcl.style.css') ?>
     <?= $this->fetch('css') ?>
 </head>
 <body>
+    <nav class="top-bar expanded" data-topbar role="navigation">
+        <ul class="title-area large-3 medium-4 columns">
+            <li class="name">
+                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+            </li>
+        </ul>
+        <div class="top-bar-section">
+            <ul class="right">
+                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
+                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <?= $this->Flash->render() ?>
-    <div class="container clearfix text-center">
-        <h3><?= __('Welcome') ?></h3>
-        <p><?= __('Log in.') ?></p>
+    <div class="container clearfix">
         <?= $this->fetch('content'); ?>
     </div>
     <footer>
