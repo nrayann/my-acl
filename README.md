@@ -1,4 +1,9 @@
 # MyAcl plugin for CakePHP
+[![Latest Stable Version](https://poser.pugx.org/nrayann/my-acl/v/stable)](https://packagist.org/packages/nrayann/my-acl)
+[![Total Downloads](https://poser.pugx.org/nrayann/my-acl/downloads)](https://packagist.org/packages/nrayann/my-acl)
+[![License](https://poser.pugx.org/nrayann/my-acl/license)](https://packagist.org/packages/nrayann/my-acl)
+[![composer.lock](https://poser.pugx.org/nrayann/my-acl/composerlock)](https://packagist.org/packages/nrayann/my-acl)
+
 
 ## Installation
 
